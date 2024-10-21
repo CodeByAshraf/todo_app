@@ -14,7 +14,7 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
-    var textTheme=Theme.of(context).textTheme;
+    var textTheme = Theme.of(context).textTheme;
     return Scaffold(
       floatingActionButton: customeFab(),
       body: SafeArea(
@@ -23,7 +23,8 @@ class _HomeViewState extends State<HomeView> {
           width: double.infinity,
           child: Column(
             children: [
-              Container(
+              //!Custome AppBar
+              SizedBox(
                 width: double.infinity,
                 height: 100,
                 child: Row(
@@ -32,27 +33,40 @@ class _HomeViewState extends State<HomeView> {
                     const SizedBox(
                       height: 30,
                       width: 30,
-                      child:  CircularProgressIndicator(
-                        value: 1/3,
+                      child: CircularProgressIndicator(
+                        value: 1 / 3,
                         backgroundColor: Colors.grey,
-                        valueColor: AlwaysStoppedAnimation(MyColors.primaryColor),
+                        valueColor:
+                            AlwaysStoppedAnimation(MyColors.primaryColor),
                       ),
                     ),
                     15.w,
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(MyString.mainTitle,style: textTheme.displayMedium?.copyWith(
-                          fontWeight: FontWeight.bold
-                        ),),
+                        Text(
+                          MyString.mainTitle,
+                          style: textTheme.displayMedium
+                              ?.copyWith(fontWeight: FontWeight.bold),
+                        ),
                         3.h,
-                        Text("1 of 3 task",style: textTheme.titleMedium,),
+                        Text(
+                          "1 of 3 task",
+                          style: textTheme.titleMedium,
+                        ),
                       ],
                     ),
                   ],
                 ),
-                
-              )
+              ),
+              //!Custome Divider
+              const Center(
+                child: Divider(
+                  thickness: 2,
+                  indent: 25,
+                  endIndent: 25,
+                ),
+              ),
             ],
           ),
         ),
