@@ -67,6 +67,49 @@ class _HomeViewState extends State<HomeView> {
                   endIndent: 25,
                 ),
               ),
+              20.h,
+              //!ListView Of Tasks
+              Expanded(
+                child: ListView.builder(
+                  itemCount: 20,
+                  scrollDirection: Axis.vertical,
+                  itemBuilder: (context, index) {
+                    return AnimatedContainer(
+                      margin: const EdgeInsets.symmetric(
+                        horizontal: 16,
+                        vertical: 8,
+                      ),
+                      duration: const Duration(milliseconds: 600),
+                      decoration: BoxDecoration(
+                          color: MyColors.primaryColor.withOpacity(0.3),
+                          borderRadius: BorderRadius.circular(8),
+                          boxShadow: [
+                            BoxShadow(
+                              blurRadius: 5,
+                              color: Colors.black.withOpacity(.1),
+                              offset: const Offset(0, 4),
+                            )
+                          ]),
+                      child: ListTile(
+                        leading: GestureDetector(
+                          onTap: () {
+                            
+                          },
+                          child: AnimatedContainer(
+                            duration: const Duration(milliseconds: 600),
+                            decoration: BoxDecoration(
+                              color:MyColors.primaryColor,
+                              shape: BoxShape.circle,
+                              border:Border.all(color: Colors.grey,width: .8),
+                            ),
+                            child: const Icon(Icons.check,color: Colors.white,),
+                          ),
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              )
             ],
           ),
         ),
