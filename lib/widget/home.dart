@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_slider_drawer/flutter_slider_drawer.dart';
 import 'package:todo_app/components/appbarview.dart';
 import 'package:todo_app/components/custome_fab.dart';
+import 'package:todo_app/components/custome_slider.dart';
 import 'package:todo_app/widget/home_body.dart';
 
 class HomeView extends StatefulWidget {
@@ -23,9 +24,7 @@ class _HomeViewState extends State<HomeView> {
         key: drawer,
         isDraggable: false,
         animationDuration: 1000,
-        slider: Container(
-          color: Colors.red,
-        ),
+        slider:CustomeSlider(),
         appBar: AppBarView(drawerKey: drawer,),
         child: homeBody(textTheme, testValues),
       ),

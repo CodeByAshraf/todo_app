@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slider_drawer/flutter_slider_drawer.dart';
 
@@ -45,6 +46,7 @@ class _AppBarViewState extends State<AppBarView>
       width: double.infinity,
       height: 130,
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           IconButton(
             onPressed: onDrawer,
@@ -53,6 +55,10 @@ class _AppBarViewState extends State<AppBarView>
               progress: animatController,
             ),
           ),
+          IconButton(onPressed: () {
+          }, icon:const Icon(
+            CupertinoIcons.trash,
+          ))
         ],
       ),
     );
