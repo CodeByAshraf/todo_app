@@ -19,13 +19,13 @@ class _HomeViewState extends State<HomeView> {
     var textTheme = Theme.of(context).textTheme;
     final List<int> testValues = [];
     return Scaffold(
-      floatingActionButton: customeFab(),
+      floatingActionButton: const CustomeFab(),
       body: SliderDrawer(
         key: drawer,
         isDraggable: false,
         animationDuration: 1000,
         slider:CustomeSlider(),
-        appBar: AppBarView(drawerKey: drawer,),
+        appBar: AppBarView(drawerKey:drawer,),
         child: homeBody(textTheme, testValues),
       ),
     );

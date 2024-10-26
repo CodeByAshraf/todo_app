@@ -1,10 +1,16 @@
-  import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
+import 'package:todo_app/functions/custome_navigate.dart';
+import 'package:todo_app/routes/routes_string.dart';
 import 'package:todo_app/utils/colors.dart';
 
-GestureDetector customeFab() {
+class CustomeFab extends StatelessWidget {
+  const CustomeFab({super.key});
+
+  @override
+  Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        
+        customeNavigate(context, AppRoutesString.taskDetails);
       },
       child: Material(
         borderRadius: BorderRadius.circular(15),
@@ -17,9 +23,13 @@ GestureDetector customeFab() {
             color: MyColors.primaryColor,
           ),
           child: const Center(
-            child: Icon(Icons.add,color: Colors.white,),
+            child: Icon(
+              Icons.add,
+              color: Colors.white,
+            ),
           ),
         ),
       ),
     );
   }
+}

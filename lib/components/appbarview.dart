@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_slider_drawer/flutter_slider_drawer.dart';
 
 class AppBarView extends StatefulWidget {
-  const AppBarView({super.key, required this.drawerKey});
+  const AppBarView({super.key, required this.drawerKey, });
   final GlobalKey<SliderDrawerState> drawerKey;
   @override
   State<AppBarView> createState() => _AppBarViewState();
